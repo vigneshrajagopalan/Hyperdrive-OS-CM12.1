@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Select to either build the ROM or build the apps/frameworks"
+select CHOICE in "build" "apps"; do
+    case "$CHOICE" in
+        Build ROM) ./tools/build_linux break;;
+        Build Apps/Framework) ./tools/compile_apps_linux break;;
+    esac
+done
+
+exit 0
