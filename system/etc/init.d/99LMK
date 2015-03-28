@@ -1,0 +1,49 @@
+#!/system/bin/sh
+# Copyright© 2015 Pizza_Dox
+#((page * 4)/ 1024) = mb
+
+sleep 5
+
+if [ -e /sys/module/lowmemorykiller/parameters/minfree ]; then
+	echo "4444,6031,7777,11745,13491,15872" > /sys/module/lowmemorykiller/parameters/minfree
+fi
+
+if [ -e /proc/sys/vm/swappiness ]; then
+	echo "80" > /proc/sys/vm/swappiness
+fi
+
+if [ -e /proc/sys/vm/vfs_cache_pressure ]; then
+	echo "10" > /proc/sys/vm/vfs_cache_pressure
+fi
+
+if [ -e /proc/sys/vm/dirty_expire_centisecs ]; then
+	echo "3000" > /proc/sys/vm/dirty_expire_centisecs
+fi
+
+if [ -e /proc/sys/vm/dirty_writeback_centisecs ]; then
+	echo "500" > /proc/sys/vm/dirty_writeback_centisecs
+fi
+
+if [ -e /proc/sys/vm/dirty_ratio ]; then
+	echo "90" > /proc/sys/vm/dirty_ratio
+fi
+
+if [ -e /proc/sys/vm/dirty_backgroud_ratio ]; then
+	echo "70" > /proc/sys/vm/dirty_backgroud_ratio
+fi
+
+if [ -e /proc/sys/vm/overcommit_memory ]; then
+	echo "1" > /proc/sys/vm/overcommit_memory
+fi
+
+if [ -e /proc/sys/vm/overcommit_ratio ]; then
+	echo "150" > /proc/sys/vm/overcommit_ratio
+fi
+
+if [ -e /proc/sys/vm/min_free_kbytes ]; then
+	echo "4096" > /proc/sys/vm/min_free_kbytes
+fi
+
+if [ -e /proc/sys/vm/oom_kill_allocating_task ]; then
+	echo "1" > /proc/sys/vm/oom_kill_allocating_task
+fi
