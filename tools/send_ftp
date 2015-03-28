@@ -1,6 +1,6 @@
 #! /bin/bash
 VERSION=$(date +%Y%m%d)
-FILE=Quantum-OS-${VERSION}.zip
+FILE=Hyperdrive-CM12.1-UNOFFICIAL-${VERSION}.zip
 
 ## Usage
 # Run "sh ftp.sh ftp.example.com/folder/to/your/save/location username password"
