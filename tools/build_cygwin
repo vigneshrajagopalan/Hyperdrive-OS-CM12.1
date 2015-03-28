@@ -3,5 +3,5 @@ VERSION=$(date +%Y%m%d)
 FILE=Hyperdrive-CM12.1-UNOFFICIAL-${VERSION}.zip
 ./tools/compile_apps_cygwin
 rm -rf Hyperdrive-CM12.1-UNOFFICIAL-*.zip
-7za a -mx9 -xr@tools/exclusion.txt "$FILE" META-INF system supersu file_contexts logo.bin boot.img
+7za a -mx9 -xr@tools/exclusion.txt "$FILE" META-INF install system supersu file_contexts boot.img
 cd ..
